@@ -1,0 +1,5 @@
+
+
+
+//182.查找重复的电子邮箱
+select p1.Email as Email from Person as p1,Person as p2 where p1.Email=p2.Email and p1.Id!=p2.Id group by Email

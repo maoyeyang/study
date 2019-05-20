@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		.new > div{
+			text-align: center;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="new"></div>
+	<script src="js/test.js"></script>
+	<!-- <script>
+		//有length属性的类数组,数组 变成数组
+		const originNews=Array.from({
+			length:10000
+		},(v,k)=>({content:`新闻${k}`}));
+
+		console.log(originNews);
+
+		//常规
+		// const container = document.querySelector(".new");
+		// for(let item in originNews){
+		// 	let ele = document.createElement("div");
+		// 	ele.innerHTML = item.content;
+		// 	container.appendChild(ele);
+		// }
+
+		//clone
+		const container = document.querySelector(".new");
+		let first = document.createElement("div");
+		for(let item of originNews){
+			console.log(item.content);
+			let ele =first.cloneNode(true);
+			ele.textContent = item.content;
+			container.appendChild(ele);
+		}
+	</script> -->
+</body>
+</html>
