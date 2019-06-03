@@ -3,7 +3,7 @@
     <div class="container">
       <p class="title">后台管理系统</p>
       <div class="msg mt20">
-        <el-input v-model="user" placeholder="请输入用户名"></el-input>
+        <el-input v-model="username" placeholder="请输入用户名"></el-input>
       </div>
       <div class="msg mt20">
         <el-input v-model="password" placeholder="请输入密码"></el-input>
@@ -20,15 +20,17 @@ export default {
   name:'Login',
   data(){
     return {
-      user:'',
+      username:'',
       password:''
     }
   },
   methods:{
     login(){
-      if(this.user && this.password){
-        localStorage.setItem('userName',this.user)
-        localStorage.setItem('password',this.password)
+      if(this.username && this.password){
+        localStorage.setItem('userName',this.username)
+        // this.$router.push('/main')
+        // this.$router.push({path:'/main'})
+        this.$router.push({name:'Main',params:{userId:1}})
       }
     }
   }
@@ -51,9 +53,6 @@ export default {
     font-size: 26px;
     font-weight: bold;
     color: #505458;
-  }
-  .msg{
-
   }
   .btn button{
     width: 100%;
