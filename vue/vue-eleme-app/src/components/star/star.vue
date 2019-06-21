@@ -67,7 +67,7 @@ ul
       width: 20px
       height: 20px
       margin-right: 2px
-      background-size: 15px 15px
+      background-size: 20px 20px
       background: center
       background-repeat: no-repeat
       &.on
